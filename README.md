@@ -1,6 +1,6 @@
 # liri-node-app
 
-Link to github repo: sefeder.github.io/liri-node-app/
+Link to github repo: https://github.com/sefeder/liri-node-app
 
 ![Screen Shot of Liri Node App](assets/images/LiriScreenShot.png)
 
