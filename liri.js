@@ -99,6 +99,7 @@ function movieDisplay(){
             }
         })
 }
+
 //below is the logic that makes liri return the correct thing depending on which command the user enters
 
 //logic for my-tweets command
