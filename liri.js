@@ -1,12 +1,12 @@
-//all global variables are defined here and all node require functions are run
+//all global variables are defined and all node require functions are run here
 require("dotenv").config();
 var keys = require('./keys.js');
-var Spotify = require('node-spotify-api');
-var spotify = new Spotify(keys.spotify);
-var Twitter = require('twitter')
-var client = new Twitter(keys.twitter);
 var request = require('request');
 var fs = require('fs');
+var Spotify = require('node-spotify-api');
+var Twitter = require('twitter')
+var spotify = new Spotify(keys.spotify);
+var client = new Twitter(keys.twitter);
 var tweetList = '';
 var input1 = process.argv[2];
 var input2 = process.argv[3];
@@ -36,7 +36,7 @@ function movieResults() {
         }
     })
 }
-//this function creates the response seen in the console for twitter requests
+//this function creates the response seen in the console and in log.txt for twitter requests
 function twitterDisplay() {
     var params = {screen_name: 'sethbackend'};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -77,7 +77,7 @@ function spotifyDisplay(){
         spotifyResults();
       });
 }
-//this function makes a movie-title-less movir request
+//this function makes a movie-titleless movie request
 function movieEmptyDisplay(){
     var queryUrl = "http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&apikey=trilogy";
     // console.log(queryUrl);
@@ -125,7 +125,7 @@ if (input1 === 'my-tweets') {
         input2=movieTitle
         movieDisplay();
     }    
-////logic for do-what-it-says command
+//logic for do-what-it-says command
 } else if (input1 === 'do-what-it-says') {
     fs.readFile('random.txt', 'utf8', function(err, data){
         if (err) {

@@ -6,6 +6,10 @@ Link to github repo: https://github.com/sefeder/liri-node-app
 
 This app utilizes node.js backend code and several different backend packages to create a "Siri-like" assistant that responds to 4 different command line inputs: my-tweets, movie-this, spotify-this-song, and do-what-it-says
 
+### Necessary before use:
+    1) Make sure to run npm install in the command line
+    2) Must have your own .env file with your own keys for spotify and twitter
+
 ### Technology Used:
 
     node.js
